@@ -1,4 +1,4 @@
-PROJECT_NAME=test
+PROJECT_NAME=river_mpw1_shiftreg
 
 C_SOURCE_FILES := $(wildcard src/*.c)
 SRCS_AS :=
@@ -41,7 +41,7 @@ SDK_VERSION=nRF51_SDK_8.1.0_b6ed55f
 SDK_URL=http://developer.nordicsemi.com/nRF51_SDK/nRF51_SDK_v8.x.x
 
 SDK_TYPE=0.x.x
-SDK_VERSION=nRF52_SDK_0.9.0_0c82e3e
+SDK_VERSION=nRF52_SDK_0.9.2_dbc28c9
 SDK_URL=http://developer.nordicsemi.com/nRF52_SDK/nRF52_SDK_v0.x.x/
 
 #SDK_TYPE=7.x.x
@@ -65,7 +65,10 @@ SDK_DRIVERS_NRF_HAL=yes
 ifeq ($(DEVICE),NRF52)
 SDK_DRIVERS_NRF_DELAY=yes
 SDK_LIBRARIES_UTIL=yes
-
+#SDK_LIBRARIES_GPIOTE=yes
+SDK_DRIVERS_NRF_GPIOTE=yes
+SDK_DRIVERS_NRF_CONFIG=yes
+SDK_DRIVERS_NRF_COMMON=yes
 # Fixme below - only if no Soft Device used
 SDK_DRIVERS_NRF_NRF_SOC_NOSD=yes
 endif

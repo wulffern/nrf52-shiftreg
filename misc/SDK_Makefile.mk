@@ -215,6 +215,7 @@ C_SOURCE_FILES += $(SDK_INSTALL_DIR)/$(SDK_VERSION)/components/libraries/gpiote/
 INC_PATHS += -I $(SDK_INSTALL_DIR)/$(SDK_VERSION)/components/libraries/gpiote
 endif
 
+
 ifeq ($(SDK_BLE_SERVICES_BLE_RSCS_C),yes)
 C_SOURCE_FILES += $(SDK_INSTALL_DIR)/$(SDK_VERSION)/components/ble/ble_services/ble_rscs_c/ble_rscs_c.c
 INC_PATHS += -I $(SDK_INSTALL_DIR)/$(SDK_VERSION)/components/ble/ble_services/ble_rscs_c
